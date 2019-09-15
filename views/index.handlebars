@@ -1,1 +1,43 @@
 {{!-- index.handlebars --}}
+
+<div class="jumbotron">
+    <img src="../public/assets/img/burgerindex.png" class="rounded float-left" alt="Image of a burger">
+    <h1 class="display-4">Feast of Burgers!</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <h2>Burgers that are ready to be devoured!</h2>
+            <ul class="list-group">
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block devoured=true}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-lg-4">
+            <h2>Burgers that have been devoured!</h2>
+            <ul class="list-group">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=false}}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-lg-4">
+            <h2>Enter a burger you want to eat then Click the "Submit" button!</h2>
+            <form>
+
+                <div class="form-group">
+                    <label for="newBurger">Enter the name of the burger.</label>
+                    <textarea class="form-control" id="newBurger" rows="3"></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
