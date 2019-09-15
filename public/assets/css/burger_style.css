@@ -1,1 +1,8 @@
 /* burger_style.css */
+
+.jumbotron {
+    background-image: url("../img/burgerindex2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
