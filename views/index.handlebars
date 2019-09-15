@@ -11,8 +11,8 @@
             <h2>Burgers that are ready to be devoured!</h2>
             <ul class="list-group">
                 {{#each burgers}}
-                {{#unless devoured}}
-                {{> burgers/burger-block devoured=true}}
+                {{#unless this.devoured}}
+                <li class="list-group-item">{{this.burger_name}}</li>
                 {{/unless}}
                 {{/each}}
             </ul>
@@ -21,8 +21,8 @@
             <h2>Burgers that have been devoured!</h2>
             <ul class="list-group">
                 {{#each burgers}}
-                {{#if devoured}}
-                {{> burgers/burger-block devoured=false}}
+                {{#if this.devoured}}
+                <li class="list-group-item">{{this.burger_name}}</li>
                 {{/if}}
                 {{/each}}
             </ul>
