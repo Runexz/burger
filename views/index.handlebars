@@ -11,7 +11,7 @@
             <ul class="list-group">
                 {{#each burgers}}
                 {{#unless this.devoured}}
-                <li class="list-group-item">{{this.burger_name}}</li>
+                {{> burger-block devoured=false}}
                 {{/unless}}
                 {{/each}}
             </ul>
@@ -21,7 +21,7 @@
             <ul class="list-group">
                 {{#each burgers}}
                 {{#if this.devoured}}
-                <li class="list-group-item">{{this.burger_name}}</li>
+                {{> burger-block devoured=true}}
                 {{/if}}
                 {{/each}}
             </ul>
