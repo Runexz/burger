@@ -1,1 +1,8 @@
 {{!-- burger-block.handlebars --}}
+<li class="list-group-item">
+    {{this.burger_name}}
+    {{#if devoured}}
+    {{else}}
+    <button class="readyToEat" data-id="{{this.id}}" data-newEaten="{{devour}}">Consume!</button>
+    {{/if}}
+</li>
