@@ -9,7 +9,7 @@ $(function () {
 
         //create a variable to hold the entered burger and set to FALSE
         var newBurger = {
-            burger_name: $("#burger").val().trim(),
+            burger_name: $("#newBurger").val().trim(),
             devoured: "0"
         };
         console.log(newBurger);
