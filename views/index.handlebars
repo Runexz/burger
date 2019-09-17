@@ -10,7 +10,7 @@
             <h2>Burgers that are ready to be devoured!</h2>
             <ul class="list-group">
                 {{#each burgers}}
-                {{#unless this.devoured}}
+                {{#unless devoured}}
                 {{> burger-block devoured=false}}
                 {{/unless}}
                 {{/each}}
@@ -21,7 +21,7 @@
             <h2>Burgers that have been devoured!</h2>
             <ul class="list-group">
                 {{#each burgers}}
-                {{#if this.devoured}}
+                {{#if devoured}}
                 {{> burger-block devoured=true}}
                 {{/if}}
                 {{/each}}
@@ -34,7 +34,7 @@
 
                 <div class="form-group">
                     <label for="newBurger">Enter the name of the burger.</label>
-                    <textarea class="form-control" id="newBurger" rows="3"></textarea>
+                    <textarea class="form-control" id="newBurger" name="name" rows="3"></textarea>
                 </div>
 
                 <button type="submit">Submit</button>
