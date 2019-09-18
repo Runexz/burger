@@ -30,12 +30,12 @@ $(function () {
     //This will change the devoured state from FALSE to TRUE
     $(".readyToEat").on("click", function (event) {
         var id = $(this).data("id");
-        var newEaten = $(this).data("neweaten") === false;
+        // var newEaten = $(this).data("neweaten") === false;
         var newEatenState = {
-            eaten: newEaten
+            devoured: true
         };
         console.log("Id: " + id);
-        console.log("Devoured: " + newEatenState.eaten);
+        console.log("Devoured: " + newEatenState.devoured);
 
         //PUT the burger to new state in API
         $.ajax("/api/burgers/" + id, {
@@ -43,7 +43,7 @@ $(function () {
             data: newEatenState
         }).then(
             function () {
-                console.log("Changed the devoured state to", newEaten);
+                console.log("Changed the devoured state to", newEatenState);
                 //reload the page to get the updated list
                 location.reload();
             }
