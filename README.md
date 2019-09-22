@@ -41,4 +41,4 @@ This section will show all the **Burgers** the user has _Consumed_.
 
 ![Example of burgers consumed](public/assets/img/ateBurger.png)
 
-<!-- [Link to application]() -->
+[Link to application](https://cryptic-brushlands-24761.herokuapp.com/)
